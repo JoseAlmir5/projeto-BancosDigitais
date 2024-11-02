@@ -1,0 +1,287 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-image: url(../img/dinheiro-fundo-projeto.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    backdrop-filter: blur(8px);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    gap: 30px;
+    padding: 30px 0;
+}
+
+.cartao-banco {
+    display: none;
+    max-width: 360px;
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.cartao-banco.aberto {
+    display: block;
+}
+
+.cartao-banco img {
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+}
+
+.cartao-banco .cartao-topo {
+    background-color: #ffffff;
+    padding: 30px 40px 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.cartao-banco .nome {
+    margin-bottom: 5px;
+}
+
+.icone-nubank {
+    background-color: #840dd2;
+    font-size: 25px;
+    border-radius: 10px;
+    padding: 2px 10px;
+}
+
+.icone-neon {
+    background-color: #015c98;
+    font-size: 25px;
+    border-radius: 10px;
+    padding: 2px 10px;
+}
+
+.icone-pag {
+    background-color: #6fcfe7;
+    font-size: 25px;
+    border-radius: 10px;
+    padding: 2px 10px;
+}
+
+.icone-inter {
+    background-color: #f15000d2;
+    font-size: 25px;
+    border-radius: 10px;
+    padding: 2px 10px;
+}
+
+.icone-pan {
+    background-color: #6b727a;
+    font-size: 25px;
+    border-radius: 10px;
+    padding: 2px 10px;
+}
+
+.icone-will {
+    background-color: #fcc719;
+    font-size: 25px;
+    border-radius: 10px;
+    padding: 2px 10px;
+}
+
+.icone-pic {
+    background-color: #3bc264;
+    font-size: 25px;
+    border-radius: 10px;
+    padding: 2px 10px;
+}
+
+.cartao-banco .detalhes {
+    color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cartao-banco .cartao-informacoes {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 30px 50px;
+    margin-top: -70px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.cartao-banco .cartao-informacoes h3{
+    font-size: 20px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #2f3235;
+
+}
+
+.cartao-banco .cartao-informacoes .descricao {
+    padding: 0 10px;
+    font-size: 15px;
+    max-height: 150px;
+    overflow-y: scroll;
+    color: #ffffff;
+}
+
+.banco-nubank {
+    background-color: #840dd2;
+}
+
+.banco-neon {
+    background-color: #015c98;
+}
+
+.banco-pagbank {
+    background-color:#6fcfe7;
+}
+
+.banco-inter {
+    background-color: #f15000d2;
+}
+
+.banco-pan {
+    background-color: #6b727a;
+}
+
+.banco-willBank {
+    background-color: #fcc719;
+}
+
+.banco-picPay {
+    background-color: #3bc264;
+}
+
+.listagem {
+    max-width: 200px;
+}
+
+.listagem .banco img{
+    width: 35%;
+    height: auto;
+}
+
+.listagem .banco {
+    background-color: #797c81;
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px 0 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    min-height: 40px;
+
+    transition: 0.6 ease-in-out;
+}
+
+.listagem .banco img {
+    background-color: #ffffff;
+    border-radius: 45px;
+    margin: 5px;
+    padding: 3;
+}
+
+.listagem .banco:hover {
+    transform: scale(1.05);
+}
+
+.listagem .banco.ativo:hover {
+    background-color: #840dd2;
+}
+
+.listagem .color2:hover {
+    background-color: #015c98;
+}
+
+
+.listagem .color3:hover {
+    background-color: #6fcfe7;
+}
+
+
+.listagem .color4:hover {
+    background-color: #f15000d2;
+}
+
+
+.listagem .color5:hover {
+    background-color: #32363a;
+}
+
+
+.listagem .color6:hover {
+    background-color: #fcc719;
+}
+
+
+.listagem .color7:hover {
+    background-color: #3bc264;
+}
+
+
+.listagem .banco h2 {
+    display: flex;
+    padding-left: 20px;
+}
+
+@media(max-width: 680px){
+    .container{
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 0;
+    }
+    .cartao-banco .cartao-informacoes{
+        padding: 60px 30px 30px;
+        margin-top: -50px;
+    }
+    
+    .cartao-banco .cartao-informacoes h3{
+        font-size: 16px;
+    }
+    
+    .listagem{
+        max-width: 360px;
+    }
+    
+    .listagem .banco{
+        width: 45%;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-radius: 2px;
+    }
+
+    .listagem ul{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}
